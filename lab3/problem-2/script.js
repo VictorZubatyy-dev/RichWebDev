@@ -9,6 +9,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
     .then(json => json.map(({body}) => body))
-    .then(json => json.reduce((acc, e) => acc.set(e, (acc.get(e)), new Map()))
+    .then(json => json.reduce((acc, e) => acc.set(e, (acc.get(e)), new Map())))
     .then(json => console.log(json))
 }

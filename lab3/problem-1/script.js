@@ -19,7 +19,6 @@ function validateForm(){
 
 function validateName(){
     error = false
-    console.log('name')
     let nameRegex = /^[a-zA-Z\s]+$/;
     let contactName = document.forms["contactForm"]["contactName"].value;
     var errorMsg = document.getElementById("error")
@@ -43,7 +42,6 @@ function validateName(){
 }
 
 function validateNumber(error){
-    console.log('number')
     let mobileNumberRegex = /^[0-9]+$/;
     let mobileNumber = document.forms["contactForm"]["mobileNumber"].value;
     
@@ -65,16 +63,9 @@ function validateNumber(error){
     } 
 
     return error
-    // 1111111111
 }
 
-function validateEmail(error){
-    console.log('email')
-    // no @
-    // no double .
-    // tld cannot start with .
-    // no character before @ or .
-    // only underscore, dash, char (no brackets)
+function validateEmail(error){  
     let email = document.forms["contactForm"]["email"].value;
     var errorMsg = document.getElementById("error")
 
@@ -93,15 +84,6 @@ function validateEmail(error){
         error = true
     } 
     return error
-}
-
-function validateAll(){
-    var errorMsg = document.getElementById("error")
-    console.log(errorMsg.innerText)
-    if (errorMsg.innerText == '')
-    {
-        console.log('hi')
-    }
 }
 
 function addContactAfterValidation(){

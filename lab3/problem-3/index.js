@@ -31,7 +31,6 @@ const userSearch = (user) => {
   fetch(url)
     .then(response => response.json())
     .then((data) => {
-        console.log(data)
         userImage.setAttribute('src', `${data.avatar_url}`)
         name.innerText = 'Name:' + data.name
         userName.innerText = 'Username: ' + data.login
