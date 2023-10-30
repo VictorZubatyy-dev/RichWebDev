@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Phone Directory</h1>
+        <form name="contactForm">
+            <label for="name">Name</label>
+            <input type="text" name="contactName" id="note" placeholder="Enter name" required><br><br>
+            <label for="number">Number</label>
+            <input type="text" id="mobileNumber" placeholder="Enter number" required><br><br>
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email" required><br><br>
+            <button type="button" onclick="addContact()">Add contact</button>
+        </form>
+        <div id="error"></div>
+<!-- 
+        Name - Should contain only Alphabets and Space. Should be less than or equal to 20 characters in length.
+        Mobile - Should contain only Numbers. Should be equal to 10 characters in length.
+        Email - Should have a proper validation and should be less than 40 characters in length.
+ 
+        Show an error div with id 'error' if there is any error in input format or if there is any empty field. -->
+        <h2>Contact Summary</h2>
+        <table id = 'phoneBookTable'>
+            <tbody id = 'phoneBookTableBody'>
+                <tr>
+                    <th onclick="sortTable()">Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </tbody>
+        <table>
+    </div>
+</body>
+</html>

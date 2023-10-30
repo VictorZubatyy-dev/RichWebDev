@@ -33,3 +33,6 @@ for (let i = 0; i < p.length; i++){
     p[i].innerText = "This website is now about cats.";
 }
 }
+
+alert("Hello")
+cats();
